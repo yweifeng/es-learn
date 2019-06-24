@@ -55,3 +55,39 @@ REST PUT和POST的用法区别
       }
     }
  
+**查询指定索引库指定类型所有数据**
+###### 
+    curl -XGET 'http://localhost:9200/test/user/_search?pretty'
+
+**根据条件进行查询**
+###### 
+    curl -XGET 'http://localhost:9200/test/user/_search?pretty&q=age:28'
+    {
+      "took" : 3,
+      "timed_out" : false,
+      "_shards" : {
+        "total" : 1,
+        "successful" : 1,
+        "skipped" : 0,
+        "failed" : 0
+      },
+      "hits" : {
+        "total" : {
+          "value" : 1,
+          "relation" : "eq"
+        },
+        "max_score" : 1.0,
+        "hits" : [
+          {
+            "_index" : "test",
+            "_type" : "user",
+            "_id" : "1",
+            "_score" : 1.0,
+            "_source" : {
+              "name" : "jack",
+              "age" : 26
+            }
+          }
+        ]
+      }
+    }
