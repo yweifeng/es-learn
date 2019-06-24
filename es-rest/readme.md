@@ -17,14 +17,14 @@ REST PUT和POST的用法区别
  查询索引-GET
 ---
   
-根据员工id查询
+**根据员工id查询**
 ###
 
     curl -XGET 'http://localhost:9200/test/user/1'
     {"_index":"test","_type":"user","_id":"1","_version":4,"_seq_no":5,"_primary_term":1,"found":true,"_source":{"name" : "jack","age" : 26}}
 
 
-在任意的查询字符串中添加pretty参数，es可以得到易于识别的json结果
+**在任意的查询字符串中添加pretty参数，es可以得到易于识别的json结果**
 ###
 
     curl -XGET 'http://localhost:9200/test/user/1?pretty'
