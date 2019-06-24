@@ -1,5 +1,5 @@
 REST PUT和POST的用法区别
-###
+---
 
     PUT是幂等方法，而POST并不是。所以PUT用于更新操作、
     POST用于新增操作比较合适。
@@ -15,6 +15,6 @@ REST PUT和POST的用法区别
     信息到底是什么只能由服务端提供，这个时候就必须使用POST。
     
  查询索引-GET
- ###
+---
      根据员工id查询
      curl -XGET http://localhost:9200/test/user/1
