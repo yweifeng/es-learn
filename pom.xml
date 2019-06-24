@@ -11,6 +11,7 @@
     <modules>
         <module>es-rest</module>
         <module>es-dsl</module>
+        <module>es-java</module>
     </modules>
 
 
