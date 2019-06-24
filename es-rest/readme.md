@@ -16,5 +16,7 @@ REST PUT和POST的用法区别
     
  查询索引-GET
 ---
-     根据员工id查询
-     curl -XGET http://localhost:9200/test/user/1
+    `根据员工id查询`
+    curl -XGET http://localhost:9200/test/user/1
+    
+    在任意的查询字符串中添加pretty参数，es可以得到易于识别的json结果。
