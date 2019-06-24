@@ -25,7 +25,7 @@ REST PUT和POST的用法区别
 
 
 **在任意的查询字符串中添加pretty参数，es可以得到易于识别的json结果**
-###
+######
 
     curl -XGET 'http://localhost:9200/test/user/1?pretty'
     {
@@ -42,7 +42,7 @@ REST PUT和POST的用法区别
       }
     }
 
-检索文档中的一部分，如果只需要显示指定字段
+**检索文档中的一部分，如果只需要显示指定字段**
 ######
 
     curl -XGET 'http://localhost:9200/test/user/1?_source=name&pretty'
