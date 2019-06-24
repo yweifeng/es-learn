@@ -17,6 +17,7 @@ REST PUT和POST的用法区别
 ######
 
     curl -XGET 'http://localhost:9200/test/user/1'
+    
     {"_index":"test","_type":"user","_id":"1","_version":4,"_seq_no":5,"_primary_term":1,"found":true,"_source":{"name" : "jack","age" : 26}}
 
 
@@ -24,6 +25,7 @@ REST PUT和POST的用法区别
 ######
 
     curl -XGET 'http://localhost:9200/test/user/1?pretty'
+    
     {
       "_index" : "test",
       "_type" : "user",
@@ -42,6 +44,7 @@ REST PUT和POST的用法区别
 ######
 
     curl -XGET 'http://localhost:9200/test/user/1?_source=name&pretty'
+    
     {
       "_index" : "test",
       "_type" : "user",
@@ -62,6 +65,7 @@ REST PUT和POST的用法区别
 **根据条件进行查询**
 ###### 
     curl -XGET 'http://localhost:9200/test/user/_search?pretty&q=age:28'
+    
     {
       "took" : 3,
       "timed_out" : false,
